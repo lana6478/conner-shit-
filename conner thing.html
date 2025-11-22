@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fazwell's Pizzeria — The Five</title>
+  <style>
+    :root{--bg:#0f1226;--card:#111428;--accent:#f7b500;--muted:#9aa0bd;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,#05060b 0%, #0f1226 100%);color:#e6eef8;line-height:1.5}
+    header{padding:40px 20px;text-align:center}
+    h1{margin:0;font-size:clamp(1.6rem,3vw,2.4rem)}
+    p.lead{color:var(--muted);max-width:760px;margin:12px auto 0}
+    main{max-width:980px;margin:36px auto;padding:20px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .timeline{list-style:none;padding:0;margin:0}
+    .timeline li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .character{display:flex;gap:12px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#22273b,#0b1020);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .yellow{background:linear-gradient(135deg,#ffec99,#ffd24d);color:#3b2a00}
+    footer{padding:30px 20px;text-align:center;color:var(--muted);font-size:0.9rem}
+    .reveal{background:var(--glass);padding:12px;border-radius:8px;margin-top:12px;color:var(--muted)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(180deg,#1f2740,#151826);color:#e6eef8;text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    /* subtle easter-egg animation for the yellow rabbit */
+    .bunny-eye{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3b2a00;margin-left:6px;vertical-align:middle;}
+    .blink{animation:blink 4s infinite}
+    @keyframes blink{0%,90%,100%{transform:scaleY(1)}95%{transform:scaleY(0.05)}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fazwell's Pizzeria — The Five</h1>
+    <p class="lead">An alternate retelling of the tragic events that once haunted the cheerful lights and animatronic smiles. Names and details have been changed; the yellow rabbit still remembers.</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading">Timeline — The Five Incidents</h2>
+        <ul class="timeline" aria-live="polite">
+          <li>
+            <strong>April, Year Unknown — Incident One</strong>
+            <div class="muted">A small guest vanished after the evening show. Surveillance footage later showed a shadow moving behind the yellow rabbit during cleanup.</div>
+          </li>
+          <li>
+            <strong>June — Incident Two</strong>
+            <div class="muted">A staff member reported odd noises coming from the prop storage; a second disappearance followed. The yellow rabbit's stage routine had been altered that night.</div>
+          </li>
+          <li>
+            <strong>August — Incident Three</strong>
+            <div class="muted">Two teenagers were found missing after a late-night dare. A discarded backstage badge hinted at tampering with the animatronic wiring.</div>
+          </li>
+          <li>
+            <strong>October — Incident Four</strong>
+            <div class="muted">An employee who claimed they could 'hear voices' left abruptly; they were never seen again. On the last photo they took, the yellow rabbit appears out of frame.</div>
+          </li>
+          <li>
+            <strong>December — Incident Five</strong>
+            <div class="muted">A fatal accident was reported during an overnight maintenance check. While labeled an accident in official logs, eyewitnesses whispered about something—someone—hidden inside the yellow rabbit suit.</div>
+          </li>
+        </ul>
+
+        <div class="reveal" id="reveal">
+          <strong>Note:</strong> This page is a fictional, slightly altered retelling for creative purposes. It includes unsettling themes but avoids graphic detail.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3>Key Figure — "Sunny" the Yellow Rabbit <span class="bunny-eye blink" title="the yellow rabbit"></span></h3>
+        <div class="character">
+          <div class="avatar yellow" aria-hidden="true">SR</div>
+          <div>
+            <p class="muted">Known in the original show lineup as a cheerful mascot, in this version "Sunny" is central to the mystery. Folks say Sunny's wiring remembered more than it should.</p>
+            <p><strong>Role</strong>: Stage mascot, photo-op host</p>
+            <p><strong>Mystery</strong>: Could an animatronic remember or replay moments of the past? Witness accounts and damaged recordings leave more questions than answers.</p>
+          </div>
+        </div>
+
+        <hr style="border-color:rgba(255,255,255,0.03);margin:14px 0">
+        <h4>Explore</h4>
+        <p class="muted">Use the buttons below to toggle small extras.</p>
+        <p><a href="#" class="btn" id="toggle-more">Toggle Short Notes</a></p>
+      </aside>
+    </div>
+
+    <section style="margin-top:20px" class="card" id="notes" hidden>
+      <h3>Short Notes & Theories</h3>
+      <ul>
+        <li class="muted">Theory: The yellow rabbit's suit doubled as storage for a retired prop system—someone could hide inside.</li>
+        <li class="muted">Theory: Recordings show odd audio artifacts near the rabbit's stage—patterns that resemble humming or speech reversed.</li>
+        <li class="muted">Theory: A cover-up by management labeled many things as 'accidents' to protect the brand.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="muted">Made for storytelling. If you'd like the page as a downloadable .html file, or want stronger visuals, I can add images, fonts, or a printable poster.</div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggle-more');
+    const notes = document.getElementById('notes');
+    btn.addEventListener('click', (e)=>{e.preventDefault();notes.hidden = !notes.hidden; btn.textContent = notes.hidden ? 'Toggle Short Notes' : 'Hide Short Notes'});
+  </script>
+</body>
+</html>
